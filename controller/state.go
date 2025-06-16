@@ -1245,8 +1245,5 @@ func isConversionWebhookError(err error) bool {
 		return false
 	}
 	errStr := err.Error()
-	return strings.Contains(errStr, "conversion webhook") ||
-		strings.Contains(errStr, "failed to call webhook") ||
-		strings.Contains(errStr, "failed to convert") ||
-		strings.Contains(errStr, "no endpoints available for service")
+	return strings.Contains(errStr, "conversion webhook")
 }
